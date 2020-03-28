@@ -64,7 +64,6 @@ const Navigation = (props, context) => {
     <Nav
       type="primary"
       selectedKeys={[pathname]}
-      defaultSelectedKeys={[pathname]}
       embeddable
       openMode="single"
       iconOnly={isCollapse}

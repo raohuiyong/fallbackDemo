@@ -29,7 +29,7 @@ export default [
       {
         path: "/",
         exact: true,
-        redirect: "/dashboard"
+        redirect: "/home"
       },
       {
         path: "*",

@@ -1,6 +1,9 @@
 import React from "react";
 import { createApp, APP_MODE, IAppConfig } from "ice";
 import LocaleProvider from "@/components/LocaleProvider";
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 const appConfig: IAppConfig = {
   app: {
@@ -18,9 +21,10 @@ const appConfig: IAppConfig = {
     timeout: 5000,
     baseURL: "/",
     interceptors: {
-      request: {
-        onConfig: config => {
-          return config;
+      response: {
+        onError: error => {
+          history.push("/about");
+          return Promise.reject(error);
         }
       }
     }
