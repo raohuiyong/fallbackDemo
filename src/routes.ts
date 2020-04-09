@@ -3,7 +3,7 @@ import BasicLayout from "@/layouts/BasicLayout";
 
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const Home = lazy(() => import("@/pages/Home"));
-const About = lazy(() => import("@/pages/About"));
+const About = lazy(() => import("@/pages/About"), false);
 const Notfound = lazy(() => import("@/pages/NotFound"));
 
 export default [

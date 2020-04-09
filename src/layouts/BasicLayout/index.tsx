@@ -34,7 +34,7 @@ export default function BasicLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
   const getDevice = (width: number) => {
     const isPhone =
       typeof navigator !== 'undefined' &&
